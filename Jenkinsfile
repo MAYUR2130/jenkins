@@ -22,7 +22,7 @@ pipeline{
                     sh "docker login -u mayur21 -p ${dockerPass}"
                     }
                 
-                sh label: '', script: 'docker push mayur/springboot:latest'
+                sh label: '', script: 'docker push mayur21/springboot:latest'
             }
         }
     }   
