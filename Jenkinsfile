@@ -1,10 +1,15 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
+        stage('checkout'){
             steps{
-                echo 'helo mayur'
+                git 'https://github.com/MAYUR2130/SpringBootNew.git'
             }
         }
+        stage('build'){
+            steps{
+                  sh label: '', script: 'mvn clean install'
+            }
+        }    
     }   
 }
