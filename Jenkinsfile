@@ -1,8 +1,8 @@
 pipeline{
     agent any
     stages{
-        stage{
-            stpes('Build'){
+        stage('Build'){
+            stpes{
                 echo 'helo mayur'
             }
         }
