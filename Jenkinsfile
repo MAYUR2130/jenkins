@@ -8,12 +8,12 @@ pipeline{
         }
         stage('build'){
             steps{
-                  sh label: '', script: 'mvn clean install'
+                  sh 'mvn clean install'
             }
         }
         stage('Docker build'){
             steps{
-                sh label: '', script: 'docker build -t mayur21/springboot:latest .'
+                sh 'docker build -t mayur21/springboot:latest .'
             }
         }
         stage('Docker push'){
@@ -22,7 +22,7 @@ pipeline{
                     sh "docker login -u mayur21 -p ${dockerPass}"
                     }
                 
-                sh label: '', script: 'docker push mayur21/springboot:latest'
+                sh 'docker push mayur21/springboot:latest'
             }
         }
     }   
