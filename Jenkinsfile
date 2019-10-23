@@ -1,5 +1,5 @@
-node('maven'){
-    agent none
+pipeline{
+    agent any
     stages{
         stage('checkout'){
             steps{
